@@ -1,0 +1,860 @@
+<!doctype html>
+
+
+
+
+<html class="theme-next mist" lang="zh-Hans">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+
+
+
+
+
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/ym/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+
+
+
+
+  
+  
+  
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+
+
+
+
+
+<link href="/ym/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
+
+<link href="/ym/css/main.css?v=5.1.1" rel="stylesheet" type="text/css" />
+
+
+  <meta name="keywords" content="v,p,s," />
+
+
+
+
+
+
+
+
+  <link rel="shortcut icon" type="image/x-icon" href="/ym/favicon.ico?v=5.1.1" />
+
+
+
+
+
+
+<meta name="description" content="虚拟主机、VPS、云服务器的区别(1)供应和部署时间虚拟主机——数天至数周VPS———即时，无需安装操作系统云服务器——即时，几分钟即可完成，可一键部署、也可自主安装操作系统 (2)安全可靠性虚拟主机——一般：租用白牌服务器故障率高、基本无ARP、木马和DDOS防范能力、基本无备机和数据备份服务 VPS———差：同一台物理服务器上其他VPS上安装的程序缺陷、ARP欺骗、病毒、资源挤占等会严重影响到">
+<meta name="keywords" content="vps">
+<meta property="og:type" content="article">
+<meta property="og:title" content="虚拟主机、VPS、云服务器的区别">
+<meta property="og:url" content="http://youngnavy.github.io/ym/vps.html">
+<meta property="og:site_name" content="六六六域名">
+<meta property="og:description" content="虚拟主机、VPS、云服务器的区别(1)供应和部署时间虚拟主机——数天至数周VPS———即时，无需安装操作系统云服务器——即时，几分钟即可完成，可一键部署、也可自主安装操作系统 (2)安全可靠性虚拟主机——一般：租用白牌服务器故障率高、基本无ARP、木马和DDOS防范能力、基本无备机和数据备份服务 VPS———差：同一台物理服务器上其他VPS上安装的程序缺陷、ARP欺骗、病毒、资源挤占等会严重影响到">
+<meta property="og:locale" content="zh-Hans">
+<meta property="og:image" content="http://or22gdng5.bkt.clouddn.com/mark/20171006-220603751.jpg">
+<meta property="og:updated_time" content="2017-10-20T09:39:56.686Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="虚拟主机、VPS、云服务器的区别">
+<meta name="twitter:description" content="虚拟主机、VPS、云服务器的区别(1)供应和部署时间虚拟主机——数天至数周VPS———即时，无需安装操作系统云服务器——即时，几分钟即可完成，可一键部署、也可自主安装操作系统 (2)安全可靠性虚拟主机——一般：租用白牌服务器故障率高、基本无ARP、木马和DDOS防范能力、基本无备机和数据备份服务 VPS———差：同一台物理服务器上其他VPS上安装的程序缺陷、ARP欺骗、病毒、资源挤占等会严重影响到">
+<meta name="twitter:image" content="http://or22gdng5.bkt.clouddn.com/mark/20171006-220603751.jpg">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/ym/',
+    scheme: 'Mist',
+    sidebar: {"position":"left","display":"post","offset":12,"offset_float":0,"b2t":false,"scrollpercent":false},
+    fancybox: true,
+    motion: false,
+    duoshuo: {
+      userId: '0',
+      author: '博主'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+
+  <link rel="canonical" href="http://youngnavy.github.io/ym/vps.html"/>
+
+
+
+
+
+<script>
+(function(){
+    var bp = document.createElement('script');
+    var curProtocol = window.location.protocol.split(':')[0];
+    if (curProtocol === 'https') {
+        bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';        
+    }
+    else {
+        bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+    }
+    var s = document.getElementsByTagName("script")[0];
+    s.parentNode.insertBefore(bp, s);
+})();
+</script>
+
+  <title>虚拟主机、VPS、云服务器的区别 | 六六六域名</title>
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-left page-post-detail ">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/ym/"  class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">六六六域名</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+      
+        <h1 class="site-subtitle" itemprop="description">六六六域名米表（www.666ym.cn）专注.VIP后缀、.CC后缀、.cn后缀等；双拼、四字母、四声</h1>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/ym/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
+            
+            首页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/ym/archives" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
+            
+            目录
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-mibiao">
+          <a href="/ym/news/mibiao.html" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-question-circle"></i> <br />
+            
+            我的米表
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-domain">
+          <a href="/ym/domain" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-question-circle"></i> <br />
+            
+            域名商城
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-about">
+          <a href="/ym/about" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-user"></i> <br />
+            
+            关于
+          </a>
+        </li>
+      
+
+      
+    </ul>
+  
+
+  
+</nav>
+
+
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-categories " itemscope itemtype="http://schema.org/Article">
+    <link itemprop="mainEntityOfPage" href="http://youngnavy.github.io/ym/ym/vps.html">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="www.666ym.cn">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="http://or22gdng5.bkt.clouddn.com/mark/20171006-214444259.png?imageslim">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="六六六域名">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h2 class="post-title" itemprop="name headline">虚拟主机、VPS、云服务器的区别</h2>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-09-12T10:59:31+08:00">
+                2017-09-12
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/ym/categories/shown/" itemprop="url" rel="index">
+                    <span itemprop="name">展示</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <h1 id="虚拟主机、VPS、云服务器的区别"><a href="#虚拟主机、VPS、云服务器的区别" class="headerlink" title="虚拟主机、VPS、云服务器的区别"></a>虚拟主机、VPS、云服务器的区别</h1><h2 id="1-供应和部署时间"><a href="#1-供应和部署时间" class="headerlink" title="(1)供应和部署时间"></a>(1)供应和部署时间</h2><p>虚拟主机——数天至数周VPS———即时，无需安装操作系统云服务器——即时，几分钟即可完成，可一键部署、也可自主安装操作系统</p>
+<h2 id="2-安全可靠性"><a href="#2-安全可靠性" class="headerlink" title="(2)安全可靠性"></a>(2)安全可靠性</h2><p>虚拟主机——一般：租用白牌服务器故障率高、基本无ARP、木马和DDOS防范能力、基本无备机和数据备份服务</p>
+<p>VPS———差：同一台物理服务器上其他VPS上安装的程序缺陷、ARP欺骗、病毒、资源挤占等会严重影响到自身;基本无ARP、木马和DDOS防范能力</p>
+<p>云服务器——高：内置ARP防范，规模化提升DDOS防攻击能力;分享品牌企业级服务器和硬件虚拟化的性能和可靠性，内置HA;提供备机、快照、数据备份等多种快速恢复措施</p>
+<h2 id="3-性能及保障"><a href="#3-性能及保障" class="headerlink" title="(3)性能及保障"></a>(3)性能及保障</h2><p>虚拟主机——好且有保障</p>
+<p>VPS———差：性能一般，只适用于小规模并发访问;性能无保障，易遭受同一台物理服务器上其他VPS的挤压</p>
+<p>云服务器——好且有保障：同物理服务器</p>
+<h2 id="4-弹性和扩展性"><a href="#4-弹性和扩展性" class="headerlink" title="(4)弹性和扩展性"></a>(4)弹性和扩展性</h2><p>虚拟主机——扩容需要重新租用新服务器、还需为原有租用资源付费</p>
+<p>VPS———扩容快，受制于单台服务器配置</p>
+<p>云服务器——即时供应、按需扩展 ，无需为原有租用资源付费</p>
+<h2 id="5-拥有成本"><a href="#5-拥有成本" class="headerlink" title="(5)拥有成本"></a>(5)拥有成本</h2><p>虚拟主机——季付年付成本高、需要为服务商转嫁CapEx支出支付押金;需要自己维护租用的服务器导致Opex较高</p>
+<p>VPS———低配置的VPS租用价格最低;但低安全可靠性和无保障的性能导致服务质量无保障，运营成本难控制且偏高</p>
+<p>云服务器——综合成本最低：月付无押金、按需使用按需付费、基本零维护 ，还可分享规模化、绿色节能、最佳IT实践带来的成本优势</p>
+<h2 id="6-易用、易管理性"><a href="#6-易用、易管理性" class="headerlink" title="(6)易用、易管理性"></a>(6)易用、易管理性</h2><p>虚拟主机——需要远程控制卡且只有租用品牌机才有可能，无法实现集中统一管理</p>
+<p>VPS———提供单一的单机管理界面，无root或超级管理员操作系统权限，管理灵活性受制于管理界面</p>
+<p>云服务器——内置KVM、客户通过自服务系统可以集中统一管理分布在各地的云服务器;完全拥有root或超级管理员操作系统权限</p>
+<h1 id="云服务器的优点云服务器主要有三大优点。"><a href="#云服务器的优点云服务器主要有三大优点。" class="headerlink" title="云服务器的优点云服务器主要有三大优点。"></a>云服务器的优点云服务器主要有三大优点。</h1><p>(1)便宜。因为服务可以分散到多台服务器，因此能够充分利用资源，这样就降低了硬件、电力和维护成本。而且，云服务器是根据使用量计费的，多用多付，少用少付，所以对小网站特别有利。</p>
+<p>(2)可靠。因为服务分布在多台服务器、甚至多个机房，所以不容易彻底宕机，抗灾容错能力强，可以保证长时间在线。</p>
+<p>(3)可扩展性好(scalability)。云服务器的基本特点就是分布式架构，所以可以轻而易举地增加服务器，成倍扩展服务能力。</p>
+<h1 id="云服务器的缺点"><a href="#云服务器的缺点" class="headerlink" title="云服务器的缺点"></a>云服务器的缺点</h1><p>一些客户担心云服务器的安全问题，感到对服务缺乏控制。因为云服务器只是提供网络接口，所以客户的数据必然全部服从云服务公司的安排，完全在后者控制之下。数据是否安全保密，取决于后者的职业道德和保护能力。但是，这其实是一个”伪问题”，因为绝大多数情况下，云服务公司会比客户更在乎、也更善于保护数据。Paul Graham在《黑客与画家》一书中，就谈过这一点：“反对者往往觉得我们的产品不安全，如果员工可以很容易地登录，那么坏人也可以很容易地登录。一些大公司觉得不能把客户的信用卡资料交给我们，而是放在自己的服务器上更安全。……但是事实上，他们的服务器就是没我们的安全，我们对数据的保护几乎肯定比他们好。想想看，谁能雇到更高水平的网络安全专家，是一个所有业务就是管理服务器的技术型创业公司，还是一家服装零售商？……而且我们比他们更关心数据的安全。如果一家服装零售商的服务器被入侵，最多只影响到这家公司本身，这件事也很可能在公司内部被掩盖起来，最严重的情况下可能还会有一个员工被解雇。但是，如果我们的服务器被入侵，就有成千上万家公司可能受到影响，这件事也许还会被当作新闻，发表在业内网站上面，使得我们生意做不下去，不得不关门歇业。如果你想把钱藏在安全的地方，请问你是选择家中床垫下面，还是选择银行？这个比喻对服务器管理的方方面面都适用，不仅是安全性，还包括正常运行时间、带宽、负载管理、备份等等，都是我们占优。”</p>
+<p><img src="http://or22gdng5.bkt.clouddn.com/mark/20171006-220603751.jpg" alt="六六六域名"></p>
+<p>原创不易，请勿抄袭，转发保留注明版权及原网页。</p>
+<p>本文已同步投稿到：<a href="http://www.666ym.cn" target="_blank" rel="external">六六六域名</a>  <a href="http://www.jianshu.com/c/ad6ff1a5e680" target="_blank" rel="external">域名交流与展示专题</a>  <a href="http://www.kuming.vip" target="_blank" rel="external">酷名网</a>  <a href="http://www.mgal.cn" target="_blank" rel="external">镁铝科技</a>  <a href="http://www.666ym.cn" target="_blank" rel="external">六六六域名</a>  简书  今日头条  微信公众号</p>
+<p>作者：亿恩</p>
+<p>链接：<a href="https://www.zhihu.com/question/31909406/answer/53804628" target="_blank" rel="external">https://www.zhihu.com/question/31909406/answer/53804628</a></p>
+<p>来源：知乎 著作权归作者所有。商业转载请联系作者获得授权，非商业转载请注明出处。</p>
+
+Hello,大家好，这里是文章底部【END】
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/ym/tags/domain/" rel="tag"># 域名</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/ym/qcly-avkz.html" rel="next" title="qcly.cn域名有点黄，但avkz.cn、eporn.vip、hmspw.cn更黄">
+                <i class="fa fa-chevron-left"></i> qcly.cn域名有点黄，但avkz.cn、eporn.vip、hmspw.cn更黄
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/ym/ttkg.html" rel="prev" title="ttkg.cc天天K歌网域名盘口价被捡，坐等终端来收购">
+                ttkg.cc天天K歌网域名盘口价被捡，坐等终端来收购 <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+  <div class="comments" id="comments">
+    
+  </div>
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <section class="site-overview sidebar-panel">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+          <img class="site-author-image" itemprop="image"
+               src="http://or22gdng5.bkt.clouddn.com/mark/20171006-214444259.png?imageslim"
+               alt="www.666ym.cn" />
+          <p class="site-author-name" itemprop="name">www.666ym.cn</p>
+           
+              <p class="site-description motion-element" itemprop="description"></p>
+           
+        </div>
+        <nav class="site-state motion-element">
+
+          
+            <div class="site-state-item site-state-posts">
+              <a href="/ym/archives">
+                <span class="site-state-item-count">36</span>
+                <span class="site-state-item-name">日志</span>
+              </a>
+            </div>
+          
+
+          
+            
+            
+            <div class="site-state-item site-state-categories">
+              <a href="/ym/categories/index.html">
+                <span class="site-state-item-count">3</span>
+                <span class="site-state-item-name">分类</span>
+              </a>
+            </div>
+          
+
+          
+            
+            
+            <div class="site-state-item site-state-tags">
+              <a href="/ym/tags/index.html">
+                <span class="site-state-item-count">24</span>
+                <span class="site-state-item-name">标签</span>
+              </a>
+            </div>
+          
+
+        </nav>
+
+        
+
+        <div class="links-of-author motion-element">
+          
+            
+              <span class="links-of-author-item">
+                <a href="https://github.com/youngnavy" target="_blank" title="GIT" rel="nofollow">
+                  
+                    <i class="fa fa-fw fa-github"></i>
+                  
+                  GIT
+                </a>
+              </span>
+            
+              <span class="links-of-author-item">
+                <a href="http://www.zhihu.com/people/your-user-name" target="_blank" title="知乎" rel="nofollow">
+                  
+                    <i class="fa fa-fw fa-twitter"></i>
+                  
+                  知乎
+                </a>
+              </span>
+            
+              <span class="links-of-author-item">
+                <a href="http://weibo.com/youngnavy" target="_blank" title="微博" rel="nofollow">
+                  
+                    <i class="fa fa-fw fa-weibo"></i>
+                  
+                  微博
+                </a>
+              </span>
+            
+              <span class="links-of-author-item">
+                <a href="http://youngnavy.icoc.cc" target="_blank" title="其他" rel="nofollow">
+                  
+                    <i class="fa fa-fw fa-wechat"></i>
+                  
+                  其他
+                </a>
+              </span>
+            
+          
+        </div>
+
+        
+        
+
+        
+        
+          <div class="links-of-blogroll motion-element links-of-blogroll-inline">
+            <div class="links-of-blogroll-title">
+              <i class="fa  fa-fw fa-globe"></i>
+              Links
+            </div>
+            <ul class="links-of-blogroll-list">
+              
+                <li class="links-of-blogroll-item">
+                  <a href="http://kuming.vip/" title="酷名网" target="_blank" rel="nofollow">酷名网</a>
+                </li>
+              
+                <li class="links-of-blogroll-item">
+                  <a href="http://mgal.cn/" title="镁铝科技" target="_blank" rel="nofollow">镁铝科技</a>
+                </li>
+              
+                <li class="links-of-blogroll-item">
+                  <a href="http://122w.cn/" title="122车务网" target="_blank" rel="nofollow">122车务网</a>
+                </li>
+              
+                <li class="links-of-blogroll-item">
+                  <a href="http://heihuo.vip/" title="黑火软件大师" target="_blank" rel="nofollow">黑火软件大师</a>
+                </li>
+              
+            </ul>
+          </div>
+        
+
+        
+
+
+      </section>
+
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#虚拟主机、VPS、云服务器的区别"><span class="nav-number">1.</span> <span class="nav-text">虚拟主机、VPS、云服务器的区别</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#1-供应和部署时间"><span class="nav-number">1.1.</span> <span class="nav-text">(1)供应和部署时间</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-安全可靠性"><span class="nav-number">1.2.</span> <span class="nav-text">(2)安全可靠性</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#3-性能及保障"><span class="nav-number">1.3.</span> <span class="nav-text">(3)性能及保障</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#4-弹性和扩展性"><span class="nav-number">1.4.</span> <span class="nav-text">(4)弹性和扩展性</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#5-拥有成本"><span class="nav-number">1.5.</span> <span class="nav-text">(5)拥有成本</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#6-易用、易管理性"><span class="nav-number">1.6.</span> <span class="nav-text">(6)易用、易管理性</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#云服务器的优点云服务器主要有三大优点。"><span class="nav-number">2.</span> <span class="nav-text">云服务器的优点云服务器主要有三大优点。</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#云服务器的缺点"><span class="nav-number">3.</span> <span class="nav-text">云服务器的缺点</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
+
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright" >
+  
+  &copy;  2013 - 
+  <span itemprop="copyrightYear">2018</span>
+  <span class="with-love">
+    <i class="fa fa-youngnavy"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">www.666ym.cn</span>
+</div>
+
+<div class="powered-by">
+  由 <a class="theme-link" href="https://hexo.io" rel="nofollow">Hexo</a> 强力驱动
+</div>
+
+<div class="theme-info">
+  主题 -
+  <a class="theme-link" href="https://github.com/iissnan/hexo-theme-next" rel="nofollow">
+    NexT.Mist
+  </a>
+</div>
+
+<script async src="//dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js">
+</script>
+<span id="busuanzi_container_site_uv">
+  本站访客数<span id="busuanzi_value_site_uv"></span>人次
+</span>
+<span id="busuanzi_container_site_pv">
+    本站总访问量<span id="busuanzi_value_site_pv"></span>次
+</span>
+<script>
+(function(){
+    var bp = document.createElement('script');
+    bp.src = '//push.zhanzhang.baidu.com/push.js';
+    var s = document.getElementsByTagName("script")[0];
+    s.parentNode.insertBefore(bp, s);
+})();
+</script>
+        
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+      </div>
+    
+
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  <script type="text/javascript" src="/ym/lib/jquery/index.js?v=2.1.3"></script>
+
+  
+  <script type="text/javascript" src="/ym/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+
+  
+  <script type="text/javascript" src="/ym/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+
+  
+  <script type="text/javascript" src="/ym/lib/velocity/velocity.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/ym/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/ym/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+
+
+  
+
+
+  <script type="text/javascript" src="/ym/js/src/utils.js?v=5.1.1"></script>
+
+  <script type="text/javascript" src="/ym/js/src/motion.js?v=5.1.1"></script>
+
+
+  
+  
+
+  
+  <script type="text/javascript" src="/ym/js/src/scrollspy.js?v=5.1.1"></script>
+<script type="text/javascript" src="/ym/js/src/post-details.js?v=5.1.1"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/ym/js/src/bootstrap.js?v=5.1.1"></script>
+
+
+
+  
+
+
+  
+
+
+
+
+	
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+  
+<script>
+(function(){
+    var bp = document.createElement('script');
+    var curProtocol = window.location.protocol.split(':')[0];
+    if (curProtocol === 'https') {
+        bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';        
+    }
+    else {
+        bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+    }
+    var s = document.getElementsByTagName("script")[0];
+    s.parentNode.insertBefore(bp, s);
+})();
+</script>
+
+
+  
+
+  
+
+  
+
+  
+
+</body>
+</html>
